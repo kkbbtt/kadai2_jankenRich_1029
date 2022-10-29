@@ -1,0 +1,339 @@
+body {
+	background-color: black;
+}
+
+.intro{
+  text-align: center;
+}
+
+.janken_box{
+    background-image: url(../img/back01.jpg);
+    width:100%;
+    margin:auto;
+    padding: 5px 0 70px;
+    text-align: center;
+}
+
+.nowar_box{
+  width:100%;
+  margin:auto;
+  padding: 5px 0 70px;
+  text-align: center;
+  background-color: white;
+}
+
+.snow {
+    color: red; /*雪の色*/
+    font-size: 20px; /*雪の大きさ*/
+    position: fixed;
+    top: -5%; /*初期位置*/
+    text-shadow:
+    5vw   -100px 2px,
+    10vw  -400px 3px,
+    20vw  -500px 4px,
+    30vw  -580px 1px,
+    39vw  -250px 2px,
+    42vw  -340px 5px,
+    56vw  -150px 2px,
+    63vw  -180px 0,
+    78vw  -220px 4px,
+    86vw  -320px 9px,
+    94vw  -170px 7px;
+    animation: anim 5s linear infinite;
+  }
+  
+@keyframes anim {
+    100% {
+      color: transparent;
+      top: 80%;
+    }
+  }
+
+  .rotateY{
+    animation-name:rotateYAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+  }
+  
+  @keyframes rotateYAnime{
+    from{
+      transform: rotateY(0);
+      }
+    to{
+      transform: rotateY(-360deg);
+      }
+  }
+
+  .skew {
+    animation: skew 3s infinite;
+  }
+  @keyframes skew {
+    0% {
+      transform: none;
+    }
+    33% {
+      transform: none;
+    }
+    33.3% {
+      transform: skewX(30deg);
+    }
+    33.6% {
+      transform: skewX(-30deg);
+    }
+    33.9% {
+      transform: none;
+    }
+    66% {
+      transform: none;
+    }
+    66.3% {
+      transform: skewX(5deg);
+    }
+    66.6% {
+      transform: skewX(-5deg);
+    }
+    66.9% {
+      transform: none;
+    }
+    77% {
+      transform: none;
+    }
+    77.3% {
+      transform: skewX(15deg);
+    }
+    77.6% {
+      transform: skewX(-15deg);
+    }
+    77.9% {
+      transform: none;
+    }
+  }
+
+.img_janken0{
+  width:80%;
+}
+
+.img_janken1{
+  width:80%;
+}
+
+.img_janken2{
+  width:80%;
+}
+
+.arrow_box{
+  position: relative;    /* relative → absoluteに記述変更 */
+  background: #d50606;
+  border: 1px solid #d50606;
+   
+  width:180px;
+  color:#fff;
+  padding:6px;
+  text-align:center;
+  font-weight:bold;
+  font-size:18px;
+  top: 15px;           /* 記述追加 重ねたい Y位置を指定 */
+  margin:auto;          /* 記述追加 重ねたい X位置を指定 */
+}
+.arrow_box:after, .arrow_box:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.arrow_box:after {
+  border-color: rgba(213, 6, 6, 0);
+  border-top-color: #d50606;
+  border-width: 7px;
+ margin-left: -7px;
+}
+.arrow_box:before {
+  border-color: rgba(213, 6, 6, 0);
+  border-top-color: #d50606;
+  border-width: 8px;
+  margin-left: -8px;
+}
+ 
+.obachan_box {
+    position: relative;
+    color: #fff;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top:5px;
+    overflow: hidden;
+}
+  
+.obachan_box p {
+    display: inline;  
+}
+
+.sample_box{
+  width:30%; /*ボックスサイズ*/
+  margin:0 auto; /*中央寄せ*/
+  overflow:hidden; /*はみ出た部分は非表示*/
+  display: inline-block;
+}
+
+ .sample_box img{
+  transition:1s all;
+ }
+
+ .sample_box img:hover{
+   transform:scale(1.2,1.2);
+   transition:0.3s all;
+ }
+
+ .animation{
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  width: 40%;
+  margin: auto;
+}
+
+.keyframe2{
+  animation-name: anim_h;
+}
+
+@keyframes anim_h {
+  0% {
+    transform: translate(0px, 0);
+  }
+  100% {
+    transform: translate(30px, 0);
+  }
+}
+
+.animation02{
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  width: 60%;
+  margin: auto;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+  } 
+
+  .popup.is-show {
+  opacity: 1;
+  visibility: visible;
+  }
+
+  .popup-contents {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 73%;
+  max-width: 890px;
+  padding: .5%;
+  text-align: center;
+  background-color: #F0FFFF;
+  z-index: 2;
+  } 
+
+  .popup-contents img {
+  width:100%;
+  }
+
+  .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  }
+
+  .close-btn span {
+  font-size: 20px;
+  color: #333;
+  }
+
+  .close-btn span .btn:before {
+  content: ""; /* 閉じるボタンの画像など */
+  }
+  
+  .black-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 1;
+  cursor: pointer; 
+  }
+
+  .btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 60px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: auto;
+    margin-top: 15px;
+  }
+  
+  .btn a:hover {
+    color: #f2f2f2;
+  }
+
+  .btn02 a {
+    background-color: firebrick;
+    border: 1px solid firebrick;
+    border-radius: 35px;
+  }
+  
+  .btn02 a:hover {
+    background-color: rgb(255, 83, 83);
+    border: 1px solid #333;
+  }
+  
+  .btn02 a::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    right: -35px;
+    transform: rotate(30deg);
+    width: 12px;
+    height: 1px;
+    background-color: #333;
+  }
+  
+  .btn02 a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 1px;
+    background-color: #333;
+  }
