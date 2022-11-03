@@ -9,20 +9,24 @@
 const btn3 = document.getElementById('btn3');
 const mask = document.getElementById('mask');
 const modal = document.getElementById('modal');
+const music = new Audio('win.mp3');
 
 $(".img_janken0").on("click", function () {
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     console.log(random, "ランダムな数字");
 
     if (random === 0) {
         mask_draw.classList.remove('hidden');
         modal_draw.classList.remove('hidden');
+        new Audio('sound/draw.mp3').play();
       } else if (random === 1) {
         mask_lose.classList.remove('hidden');
         modal_lose.classList.remove('hidden');
+        new Audio('sound/lose.mp3').play();
       } else if (random === 2) {
         mask_win.classList.remove('hidden');
         modal_win.classList.remove('hidden');
+        new Audio('sound/win.mp3').play();
       }
 
 });

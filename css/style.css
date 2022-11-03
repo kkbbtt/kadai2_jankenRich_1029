@@ -420,3 +420,9 @@ body {
     margin: 0 auto;
     z-index: 2;
   }
+
+  .modal_text{
+    padding-top: 5px;
+    size:15px;
+    color:#333;
+  }
