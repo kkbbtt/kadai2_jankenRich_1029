@@ -6,10 +6,8 @@
  * として処理する
  */
 
-const btn3 = document.getElementById('btn3');
 const mask = document.getElementById('mask');
 const modal = document.getElementById('modal');
-const music = new Audio('win.mp3');
 
 $(".img_janken0").on("click", function () {
     var random = Math.floor(Math.random() * 3);
@@ -19,45 +17,81 @@ $(".img_janken0").on("click", function () {
         mask_draw.classList.remove('hidden');
         modal_draw.classList.remove('hidden');
         new Audio('sound/draw.mp3').play();
+        document.getElementById("commentArea").innerText = "気が合うじゃない！";
+        document.getElementById("imageArea").src="img/obachan_draw.png";
+
       } else if (random === 1) {
         mask_lose.classList.remove('hidden');
         modal_lose.classList.remove('hidden');
         new Audio('sound/lose.mp3').play();
+        document.getElementById("commentArea").innerText = "ぷっ、弱すぎよ！";
+        document.getElementById("imageArea").src="img/obachan_win.png";
+
       } else if (random === 2) {
         mask_win.classList.remove('hidden');
         modal_win.classList.remove('hidden');
         new Audio('sound/win.mp3').play();
+        document.getElementById("commentArea").innerText = "サービスショットよ！";
+        document.getElementById("imageArea").src="img/obachan_lose.png";
       }
 
 });
 
 
 $(".img_janken1").on("click", function () {
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     console.log(random, "ランダムな数字");
 
     if (random === 0) {
-        window.location.href = 'win.html';
-      } else if (random === 1) {
-        window.location.href = 'draw.html';
-      } else if (random === 2) {
-        window.location.href = 'lose.html';
-      }
+      mask_win.classList.remove('hidden');
+      modal_win.classList.remove('hidden');
+      new Audio('sound/win.mp3').play();
+      document.getElementById("commentArea").innerText = "サービスショットよ！";
+      document.getElementById("imageArea").src="img/obachan_lose.png";
+
+    } else if (random === 1) {
+      mask_draw.classList.remove('hidden');
+      modal_draw.classList.remove('hidden');
+      new Audio('sound/draw.mp3').play();
+      document.getElementById("commentArea").innerText = "気が合うじゃない！";
+      document.getElementById("imageArea").src="img/obachan_draw.png";
+
+    } else if (random === 2) {
+      mask_lose.classList.remove('hidden');
+      modal_lose.classList.remove('hidden');
+      new Audio('sound/lose.mp3').play();
+      document.getElementById("commentArea").innerText = "ぷっ、弱すぎよ！";
+      document.getElementById("imageArea").src="img/obachan_win.png";
+    }
 
 });
 
 
 $(".img_janken2").on("click", function () {
-    var random = Math.floor(Math.random() * 2);
+    var random = Math.floor(Math.random() * 3);
     console.log(random, "ランダムな数字");
 
     if (random === 0) {
-        window.location.href = 'lose.html';
-      } else if (random === 1) {
-        window.location.href = 'win.html';
-      } else if (random === 2) {
-        window.location.href = 'draw.html';
-      }
+      mask_lose.classList.remove('hidden');
+      modal_lose.classList.remove('hidden');
+      new Audio('sound/lose.mp3').play();
+      document.getElementById("commentArea").innerText = "ぷっ、弱すぎよ！";
+      document.getElementById("imageArea").src="img/obachan_win.png";
+
+    } else if (random === 1) {
+      mask_win.classList.remove('hidden');
+      modal_win.classList.remove('hidden');
+      new Audio('sound/win.mp3').play();
+      document.getElementById("commentArea").innerText = "サービスショットよ！";
+      document.getElementById("imageArea").src="img/obachan_lose.png";
+
+    } else if (random === 2) {
+      mask_draw.classList.remove('hidden');
+      modal_draw.classList.remove('hidden');
+      new Audio('sound/draw.mp3').play();
+      document.getElementById("commentArea").innerText = "気が合うじゃない！";
+      document.getElementById("imageArea").src="img/obachan_draw.png";
+    }
 
 });
 

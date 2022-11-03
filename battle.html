@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
-<audio controls loop src="sound/bgm.mp3"></audio>
 <div class="janken_box">
 <div class="skew">
     <div class="snow">●</div>
-    <p><span class="arrow_box">ジャンケン勝負よ！</span></p>
+    <p><span class="arrow_box" id="commentArea">ジャンケン勝負よ！</span></p>
      <div class="obachan_box">
-       <img class="keyframe2 animation" src="img/obachan_top.png">
+       <img class="keyframe2 animation" src="img/obachan_top.png" id="imageArea">
      </div>
 
      <div id="mask_win" class="hidden"></div>
@@ -45,7 +44,7 @@
     <div class="btn btn02">
     <a href="nowar.html">バトルをやめる</a>
     </div>
-
+    <audio controls loop src="sound/bgm.mp3" class="audio_play"></audio>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/kadai.js"></script>    

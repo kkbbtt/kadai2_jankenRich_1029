@@ -426,3 +426,8 @@ body {
     size:15px;
     color:#333;
   }
+
+  .audio_play{
+    margin: auto;
+    margin-top: 35px;
+  }
