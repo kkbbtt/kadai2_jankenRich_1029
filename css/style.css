@@ -121,6 +121,10 @@ body {
   width:80%;
 }
 
+.img_result{
+  width: 400px;;
+}
+
 .arrow_box{
   position: relative;    /* relative → absoluteに記述変更 */
   background: #d50606;
@@ -336,4 +340,83 @@ body {
     width: 70px;
     height: 1px;
     background-color: #333;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  #mask_win {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #modal_win {
+    background: #fff;
+    width: 400px;
+    padding: 7px;
+    border-radius: 4px;
+    color: red;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  #mask_draw {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #modal_draw {
+    background: #fff;
+    width: 400px;
+    padding: 7px;
+    border-radius: 4px;
+    color: red;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  #mask_lose {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  #modal_lose {
+    background: #fff;
+    width: 400px;
+    padding: 7px;
+    border-radius: 4px;
+    color: red;
+    position: fixed;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
   }
